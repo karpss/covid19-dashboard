@@ -1,5 +1,5 @@
 /* eslint-disable */
-import './App.module.css';
+import  styles from'./App.module.css';
 import CountryPicker from './components/CountryPicker/CountryPicker';
 import Navbar from './components/Navbar/Navbar';
 import DataTable from './components/DataTable/Datatable';
@@ -11,15 +11,16 @@ import Graph from './components/Graph/Graph';
 
 function App() {
   return (
-    <div>
-      App
-      <Navbar/>
-      <CountryPicker/>
-      <DataTable/>
-      <Infections/>
-      <Deaths/>
-      <Graph/>
-      <Recovery/>
+    <div className={styles.container}>
+    <div className={styles.navbar}><Navbar/></div>
+      <div className={styles.countrypicker}><CountryPicker/></div>
+      <div className={styles.datatable}><DataTable/></div>
+      <div className={styles.infections}> <Infections/> </div>
+      <div className={styles.deaths}> <Deaths/> </div>
+      <div className={styles.recovery}><Recovery/></div>
+      
+     <div className={styles.graph}><Graph/></div> 
+      
       
     </div>
   );
