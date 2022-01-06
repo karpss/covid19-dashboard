@@ -1,0 +1,9 @@
+.deathgrid{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 20px solid #FF0000;
+    margin-top: -5px;
+    font-size: 18px;
+}

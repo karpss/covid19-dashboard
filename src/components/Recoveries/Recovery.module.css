@@ -1,0 +1,9 @@
+.recoverygrid{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 20px solid #4E9F3D;
+    margin-top: -5px;
+    font-size: 18px;
+}
