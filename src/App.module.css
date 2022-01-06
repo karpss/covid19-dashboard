@@ -4,18 +4,21 @@
     --main-background: #090911;
 }
 
+ *{
+  margin: 0;
+  box-sizing: border-box;
+ } 
+
 body{
     background-color: #535458 ;
 }
-
-
 
 .container{
     
         display: grid;
         height: 100vh;
         grid-template-columns: 1fr 1fr 1fr 1.5fr;
-        grid-template-rows: 0.2fr 0.5fr 1.2fr 1.8fr;
+        grid-template-rows: 0.4fr 0.5fr 1.2fr 1.8fr;
         grid-template-areas:
         "navbar navbar navbar navbar"
         "countrypicker countrypicker countrypicker datatable"
