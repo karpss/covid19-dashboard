@@ -3,8 +3,8 @@ import React from 'react';
 import styles from './Deaths.module.css';
 import CountUp from 'react-countup';
 
-const Deaths = ({data: {Global}}) => {
-    if(!Global){
+const Deaths = ({data: {deaths, todayDeaths}}) => {
+    if(!deaths){
         return 'Loading....';
       }
       
@@ -13,7 +13,7 @@ const Deaths = ({data: {Global}}) => {
                 <h2> DEATHS </h2>
                 <CountUp
                   start={0}
-                   end={Global.NewDeaths}
+                   end={todayDeaths}
                    duration={2.5}
                    separator=','
                    prefix='New Deaths : '
@@ -21,13 +21,13 @@ const Deaths = ({data: {Global}}) => {
                <br/>
               <CountUp
               start={0}
-              end={Global.TotalDeaths}
+              end={deaths}
               duration={2.5}
               separator=','
               prefix='Total Deaths : '
               />
               <br/>
-             <p>Last Update: {new Date(Global.Date).toDateString()}</p>
+             <p>Last Update: {new Date().toDateString()}</p>
               </div>
           )
 }

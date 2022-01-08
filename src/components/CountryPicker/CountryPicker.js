@@ -1,10 +1,14 @@
 /* eslint-disable */
 import React from 'react';
+import styles from './CountryPicker.module.css'
 
 const CountryPicker = () => {
+    
+
+    
     return (
-        <div>
-           CountryPicker 
+        <div className={styles.dropdown}>
+            Country Picker
         </div>
     )
 }

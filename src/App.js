@@ -13,13 +13,22 @@ import {fetchGlobalData} from './http/http';
 
 function App() {
 const [data, setData] = useState({});
+//const [country, setCountry] = useState();
 
 useEffect(() => {
 const loadGlobalData = async () => {
   setData(await fetchGlobalData());
 };
    loadGlobalData();
-}, [])
+}, []);
+
+
+// const handleCountryChange = async (country) => {
+//   const data = await fetchGlobalData(country);
+//      setCountry(country);
+//     console.log(country);
+    
+// }
 
 
 
@@ -41,12 +50,16 @@ const loadGlobalData = async () => {
       <div className={styles.infections}> 
       <Infections data={data}/> 
       </div>
-      <div className={styles.recovery}>
-        <Recovery data={data}/>
-        </div>
-      <div className={styles.deaths}>
-         <Deaths data={data}/> 
+
+      <div className={styles.recovery}> 
+      <Recovery data={data}/> 
       </div>
+
+      <div className={styles.deaths}> 
+      <Deaths data={data}/> 
+      </div>
+      
+      
       
      <div className={styles.graph}><Graph/></div> 
       

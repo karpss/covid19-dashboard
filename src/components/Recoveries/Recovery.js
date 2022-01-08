@@ -3,8 +3,8 @@ import React from 'react';
 import styles from './Recovery.module.css';
 import CountUp from 'react-countup';
 
-const Recovery = ({data: {Global}}) => {
-  if(!Global){
+const Recovery = ({data: {recovered,todayRecovered}}) => {
+  if(!recovered){
     return 'Loading....';
   }
   return (
@@ -12,7 +12,7 @@ const Recovery = ({data: {Global}}) => {
       <h2> RECOVERIES </h2>
       <CountUp
         start={0}
-         end={Global.NewRecovered}
+         end={todayRecovered}
          duration={2.5}
          separator=','
          prefix='New Recoveries: '
@@ -20,13 +20,13 @@ const Recovery = ({data: {Global}}) => {
      <br/>
     <CountUp
     start={0}
-    end={Global.TotalNewRecovered}
+    end={recovered}
     duration={2.5}
     separator=','
     prefix='Total Recoveries: '
     />
     <br/>
-    <p>Last Update: {new Date(Global.Date).toDateString()}</p>
+    <p>Last Update: {new Date().toDateString()}</p>
     </div>
 )
 }

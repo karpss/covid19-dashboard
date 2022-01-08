@@ -2,8 +2,8 @@
 import React from 'react';
 import styles from './Infections.module.css';
 import CountUp from 'react-countup';
-const Infections = ({data: {Global}}) => {
-if(!Global){
+const Infections = ({data: {cases, todayCases}}) => {
+if(!cases){
   return 'Loading....';
 }
 
@@ -12,7 +12,7 @@ if(!Global){
           <h2> INFECTIONS </h2>
           <CountUp
             start={0}
-             end={Global.NewConfirmed}
+             end={todayCases}
              duration={2.5}
              separator=','
              prefix='New Infections: '
@@ -20,13 +20,13 @@ if(!Global){
          <br/>
         <CountUp
         start={0}
-        end={Global.TotalConfirmed}
+        end={cases}
         duration={2.5}
         separator=','
         prefix='Total Infections: '
         />
         <br/>
-        <p>Last Update: {new Date(Global.Date).toDateString()}</p>
+        <p>Last Update: {new Date().toDateString()}</p>
         </div>
     )
 }
