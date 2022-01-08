@@ -13,7 +13,7 @@ import {fetchGlobalData} from './http/http';
 
 function App() {
 const [data, setData] = useState({});
-//const [country, setCountry] = useState();
+const [country, setCountry] = useState();
 
 useEffect(() => {
 const loadGlobalData = async () => {
@@ -23,12 +23,10 @@ const loadGlobalData = async () => {
 }, []);
 
 
-// const handleCountryChange = async (country) => {
-//   const data = await fetchGlobalData(country);
-//      setCountry(country);
-//     console.log(country);
+const handleCountryChange = async () => {
+  
     
-// }
+}
 
 
 
@@ -45,7 +43,7 @@ const loadGlobalData = async () => {
   return (
     <div className={styles.container}>
     <div className={styles.navbar}><Navbar/></div>
-      <div className={styles.countrypicker}><CountryPicker/></div>
+      <div className={styles.countrypicker}><CountryPicker handleCountryChange={handleCountryChange}/></div>
       <div className={styles.datatable}><DataTable/></div>
       <div className={styles.infections}> 
       <Infections data={data}/> 

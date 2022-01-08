@@ -3,6 +3,7 @@ import axios from 'axios';
 
 
 const url = 'https://disease.sh/v3/covid-19/all';
+const countriesUrl = 'https://disease.sh/v3/covid-19/countries';
 
 export const fetchGlobalData = async () => {
     try{
@@ -16,17 +17,14 @@ export const fetchGlobalData = async () => {
     } catch (error) {
         console.log(error);
     }
-}
+};
 
-// export const fetchCountriesData = async () => {
-//     try {
-//         const{
-//             data: {Countries},
-//         } = await axios.get(url);
+export const fetchCountriesData = async () => {
+    try {
+        const {data} = await axios.get(countriesUrl);
+        return data.map((listCountries) => listCountries.country)
         
-//         return Countries.map((country) => country.Country);
-        
-//     } catch (error){
-//         console.log(error);
-//     }
-// }
+    } catch (error){
+        console.log(error);
+    }
+};
