@@ -19,10 +19,34 @@ export const fetchGlobalData = async () => {
     }
 };
 
+export const fetchCountryDetails = async (countries) => {
+     let changeUrl = countriesUrl;
+
+     if(countries){
+            changeUrl = `${countriesUrl}/${countries}`;
+     }
+
+        try {
+
+            const {
+                data: {cases, todayCases, deaths,todayDeaths, recovered, todayRecovered},
+            } = await axios.get(changeUrl);
+    
+            return {cases, todayCases, deaths, todayDeaths,recovered, todayRecovered};
+
+        } catch (error) {
+            console.log(error);
+        }
+
+
+
+    
+}
+
 export const fetchCountriesData = async () => {
     try {
         const {data} = await axios.get(countriesUrl);
-        return data.map((listCountries) => listCountries.country)
+        return data.map((countries) => countries.country)
         
     } catch (error){
         console.log(error);

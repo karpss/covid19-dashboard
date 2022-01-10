@@ -8,12 +8,12 @@ import Infections from './components/Infections/Infections';
 import Recovery from './components/Recoveries/Recovery';
 import Deaths from './components/Deaths/Deaths';
 import Graph from './components/Graph/Graph';
-import {fetchGlobalData} from './http/http';
+import {fetchGlobalData, fetchCountryDetails} from './http/http';
 
 
 function App() {
 const [data, setData] = useState({});
-const [country, setCountry] = useState();
+const [countries, setCountries] = useState();
 
 useEffect(() => {
 const loadGlobalData = async () => {
@@ -23,10 +23,12 @@ const loadGlobalData = async () => {
 }, []);
 
 
-const handleCountryChange = async () => {
-  
+const handleCountryChange = async (countries) => {
+  const data = await fetchCountryDetails(countries);
+  setCountries(countries);
+  setData(data);
     
-}
+};
 
 
 
@@ -59,7 +61,7 @@ const handleCountryChange = async () => {
       
       
       
-     <div className={styles.graph}><Graph/></div> 
+     <div className={styles.graph}><Graph data={data} countries={countries}/></div> 
       
       
     </div>
