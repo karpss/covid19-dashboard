@@ -26,18 +26,9 @@ const loadGlobalData = async () => {
 const handleCountryChange = async (countries) => {
   const data = await fetchCountryDetails(countries);
   setCountries(countries);
-  setData(data);
+  setData(data); 
     
 };
-
-
-
-
-
-
-
-
-
 
 
 
@@ -45,7 +36,7 @@ const handleCountryChange = async (countries) => {
   return (
     <div className={styles.container}>
     <div className={styles.navbar}><Navbar/></div>
-      <div className={styles.countrypicker}><CountryPicker handleCountryChange={handleCountryChange}/></div>
+      <div className={styles.countrypicker}><CountryPicker  handleCountryChange={handleCountryChange}/></div>
       <div className={styles.datatable}><DataTable/></div>
       <div className={styles.infections}> 
       <Infections data={data}/> 

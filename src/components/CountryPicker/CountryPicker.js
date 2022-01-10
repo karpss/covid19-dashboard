@@ -21,7 +21,9 @@ const CountryPicker = ({handleCountryChange}) => {
         <div className={styles.dropdown}>
             <select defaultValue=""  onChange={(e) => handleCountryChange(e.target.value)}>
 
-            <option value="">Global</option>
+            <option value=""disabled>
+                Global
+            </option>
          
            
          {fetchedCountries.map((country, i) => (
