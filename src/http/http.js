@@ -19,27 +19,6 @@ export const fetchGlobalData = async () => {
     }
 };
 
-export const fetchGlobalDataGraph = async () => {
-
-try{
-   const {data} = await axios.get(url); 
-
-   const modifiedGraphData = data.map ((graphData) => ({
-        cases: graphData.cases,
-        deaths: graphData.deaths,
-        recovered: graphData.recovered,
-
-
-
-   }));
-
-        return modifiedGraphData;
-
-}catch(error){
-    console.log(error);
-}
-
-};
 
 export const fetchCountryDetails = async (countries) => {
      let changeUrl = countriesUrl;
