@@ -1,11 +1,12 @@
 /* eslint-disable */
 import React from 'react';
 
+
 const Datatable = () => {
-    return (
-        <div>
-           Datatable 
-        </div>
+    return(
+<div>
+    DataTable
+</div>
     )
 }
 

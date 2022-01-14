@@ -37,7 +37,9 @@ const handleCountryChange = async (countries) => {
     <div className={styles.container}>
     <div className={styles.navbar}><Navbar/></div>
       <div className={styles.countrypicker}><CountryPicker  handleCountryChange={handleCountryChange}/></div>
-      <div className={styles.datatable}><DataTable/></div>
+      <div className={styles.datatable}>
+        <DataTable/>
+      </div>
       <div className={styles.infections}> 
       <Infections data={data}/> 
       </div>
