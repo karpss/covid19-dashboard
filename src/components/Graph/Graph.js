@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, {useState, useEffect} from 'react';
 import {Bar} from 'react-chartjs-2';
-//import {} from '../../http/http';
 import styles from './Graph.module.css';
 
 const Graph = ({data: {cases, recovered, deaths}, countries}) => {
