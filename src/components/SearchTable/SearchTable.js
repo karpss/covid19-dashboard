@@ -6,6 +6,7 @@ import styles from './SearchTable.module.css';
 
 const SearchTable = () => {
     const [tableData, setTableData] = useState([]);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
     const fetchTableAPI = async () => {
@@ -19,10 +20,31 @@ const SearchTable = () => {
 
     }, []);
 
-    return (
-        <div className={styles.searchsize}>
+    const handleChange = (e) => {
+        setSearch(e.target.value);
+    };
 
-    {tableData.map((table) => {
+   const filteredTable = tableData.filter((table) =>
+        table.country.toLowerCase().includes(search.toLowerCase())
+    );
+
+
+    return (
+        <div className={styles.searchstyle}>
+        <div className={styles.countrysearch}>
+            <h1 className={styles.countrytext}>Search for a Country</h1>
+            <form>
+                <input
+                className={styles.countryinput}
+                type='text'
+                onChange={handleChange}
+                placeholder='Search'
+                
+                />
+            </form>
+            </div>
+
+    {filteredTable.map((table) => {
 
 
         return (
