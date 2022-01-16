@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import  styles from'./App.module.css';
 import CountryPicker from './components/CountryPicker/CountryPicker';
 import Navbar from './components/Navbar/Navbar';
-import DataTable from './components/DataTable/Datatable';
+import SearchTable from './components/SearchTable/SearchTable';
 import Infections from './components/Infections/Infections';
 import Recovery from './components/Recoveries/Recovery';
 import Deaths from './components/Deaths/Deaths';
@@ -38,7 +38,7 @@ const handleCountryChange = async (countries) => {
     <div className={styles.navbar}><Navbar/></div>
       <div className={styles.countrypicker}><CountryPicker  handleCountryChange={handleCountryChange}/></div>
       <div className={styles.datatable}>
-        <DataTable/>
+        <SearchTable/>
       </div>
       <div className={styles.infections}> 
       <Infections data={data}/> 
