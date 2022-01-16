@@ -55,4 +55,19 @@ export const fetchCountriesData = async () => {
     }
 };
 
+export const fetchDataTableData = async () => {
+try{
+
+const {data} = await axios.get(countriesUrl);
+
+return data;
+
+
+
+
+}catch (error){
+    console.log(error);
+}
+
+};
 

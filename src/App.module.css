@@ -52,6 +52,7 @@ body{
             grid-area: datatable;
             border-radius: var(--main-radius);
           padding-top: var(--main-padding);
+          overflow:scroll;
           }
 
           .infections {
