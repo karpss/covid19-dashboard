@@ -2,6 +2,7 @@
     --main-radius: 5px;
     --main-padding: 5px;
     --main-background: #090911;
+    --font-color: #ffff;
 }
 
  *{
@@ -28,7 +29,7 @@ body{
         grid-gap:0.5rem;
         font-family: "Inter", sans-serif;
         font-weight: 700;
-        color: #ffff;
+        color: var(--font-color);
         text-align: center;
       
       }

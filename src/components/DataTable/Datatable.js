@@ -12,8 +12,8 @@ const Datatable = ({country, tests, critical}) => {
    <h1>{country}</h1> 
    </div>
    <div className={styles.country_data}>
-    <p className={styles.tests}>People Tested: {tests}</p> 
-    <div className={styles.critical}>Active Cases: {critical}</div> 
+    <p className={styles.tests}>People Tested: {tests.toLocaleString()}</p> 
+    <div className={styles.critical}>Active Cases: {critical.toLocaleString()}</div> 
    </div>
    </div>
 </div>
