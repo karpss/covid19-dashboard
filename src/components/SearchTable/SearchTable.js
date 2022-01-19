@@ -30,12 +30,12 @@ const SearchTable = () => {
 
 
     return (
-        <div className={styles.searchstyle}>
-        <div className={styles.countrysearch}>
-            <h1 className={styles.countrytext}>Search for a Country</h1>
+        <div>
+        <div >
+            <h1 >Search for a Country</h1>
             <form>
                 <input
-                className={styles.countryinput}
+                className={styles.country_input}
                 type='text'
                 onChange={handleChange}
                 placeholder='Search'
@@ -53,10 +53,7 @@ const SearchTable = () => {
                <Datatable
                key={table.country}
                country={table.country}
-               cases={table.cases}
-               recovered={table.recovered}
-               deaths={table.deaths}
-               active={table.active}
+               tests={table.tests}
                critical={table.critical}
 
                
