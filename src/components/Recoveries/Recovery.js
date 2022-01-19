@@ -8,7 +8,7 @@ const Recovery = ({data: {recovered,todayRecovered}}) => {
     return 'Loading....';
   }
   return (
-    <div className={styles.recoverygrid}>
+    <div className={styles.recovery_grid}>
       <h2> RECOVERIES </h2>
       <CountUp
         start={0}

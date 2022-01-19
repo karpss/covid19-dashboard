@@ -8,7 +8,7 @@ if(!cases){
 }
 
     return (
-        <div className={styles.infectiongrid}>
+        <div className={styles.infection_grid}>
           <h2> INFECTIONS </h2>
           <CountUp
             start={0}

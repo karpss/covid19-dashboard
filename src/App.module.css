@@ -40,7 +40,7 @@ body{
       padding-top: var(--main-padding);
         }
 
-        .countrypicker {
+        .country_picker {
             background: var(--main-background);
             grid-area: countrypicker;
             border-radius: var(--main-radius);

@@ -9,7 +9,7 @@ const Deaths = ({data: {deaths, todayDeaths}}) => {
       }
       
           return (
-              <div className={styles.deathgrid}>
+              <div className={styles.death_grid}>
                 <h2> DEATHS </h2>
                 <CountUp
                   start={0}

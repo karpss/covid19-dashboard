@@ -1,10 +1,10 @@
-.tablecontainer{
+.table_container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap
 
 }
-.countryrow{
+.country_row{
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
@@ -14,19 +14,19 @@
     width: 900px;
 }
 
-.countrynameflag{
+.country_nameflag{
     display:flex;
     align-items: center;
     padding-right: 24px;
     min-width:30px;
 }
 
-.countrynameflag h1{
+.country_nameflag h1{
     font-size: 16px;
     width: 200px;
 }
 
-.countrydata{
+.country_data{
 display: flex;
 text-align: right;
 justify-content: space-between;

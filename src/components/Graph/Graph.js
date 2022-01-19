@@ -41,7 +41,7 @@ const Graph = ({data: {cases, recovered, deaths}, countries}) => {
 
 
     return (
-        <div className={styles.graphgrid}>
+        <div className={styles.graph_grid}>
             {barChart}
         </div>
     )

@@ -36,7 +36,7 @@ const handleCountryChange = async (countries) => {
   return (
     <div className={styles.container}>
     <div className={styles.navbar}><Navbar/></div>
-      <div className={styles.countrypicker}><CountryPicker  handleCountryChange={handleCountryChange}/></div>
+      <div className={styles.country_picker}><CountryPicker  handleCountryChange={handleCountryChange}/></div>
       <div className={styles.datatable}>
         <SearchTable/>
       </div>
