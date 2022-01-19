@@ -1,5 +1,47 @@
 .tablecontainer{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap
 
+}
+.countryrow{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #d7d7d7;
+    width: 900px;
+}
+
+.countrynameflag{
+    display:flex;
+    align-items: center;
+    padding-right: 24px;
+    min-width:30px;
+}
+
+.countrynameflag h1{
+    font-size: 16px;
+    width: 200px;
+}
+
+.countrydata{
+display: flex;
+text-align: right;
+justify-content: space-between;
+width: 100%;
+
+}
+
+
+.tests{
+    width:100px;
+    color: #11468F;
+}
+
+.critical{
+    width:90px;
+    color: #964B00;
+    padding-right: 10px;
 }
