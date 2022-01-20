@@ -2,7 +2,7 @@
 import React,{useState, useEffect} from 'react';
 import {fetchCountriesData} from '../../http/http';
 
-import styles from './CountryPicker.module.css'
+import styles from './CountryPicker.module.css';
 
 const CountryPicker = ({handleCountryChange}) => {
     const [fetchedCountries, setFetchedCountries] = useState([]); 
