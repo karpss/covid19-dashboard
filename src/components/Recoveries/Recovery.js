@@ -5,7 +5,7 @@ import CountUp from 'react-countup';
 
 const Recovery = ({data: {recovered,todayRecovered}}) => {
   if(!recovered){
-    return 'Loading....';
+    return '....';
   }
   return (
     <div className={styles.recovery_grid}>

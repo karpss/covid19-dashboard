@@ -5,7 +5,7 @@ import CountUp from 'react-countup';
 
 const Deaths = ({data: {deaths, todayDeaths}}) => {
     if(!deaths){
-        return 'Loading....';
+        return '....';
       }
       
           return (

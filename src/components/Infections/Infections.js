@@ -4,7 +4,7 @@ import styles from './Infections.module.css';
 import CountUp from 'react-countup';
 const Infections = ({data: {cases, todayCases}}) => {
 if(!cases){
-  return 'Loading....';
+  return '....';
 }
 
     return (

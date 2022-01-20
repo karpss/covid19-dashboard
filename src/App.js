@@ -44,7 +44,7 @@ const handleCountryChange = async (countries) => {
         <SearchTable/>
       </div>
       <div className={styles.infections}> 
-      <Infections data={data}/> 
+      <Infections data={data} /> 
       </div>
 
       <div className={styles.recovery}> 
