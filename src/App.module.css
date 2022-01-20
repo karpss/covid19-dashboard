@@ -1,8 +1,14 @@
-:root {
+[data-theme="dark"] {
     --main-radius: 5px;
     --main-padding: 5px;
     --main-background: #090911;
     --font-color: #ffff;
+}
+[data-theme="light"]{
+  --main-radius: 5px;
+    --main-padding: 5px;
+    --main-background: #ffff;;
+    --font-color: #090911;
 }
 
  *{
@@ -20,7 +26,7 @@ body{
         display: grid;
         height: 100vh;
         grid-template-columns: 1fr 1fr 1fr 1.5fr;
-        grid-template-rows: 0.4fr 0.5fr 1.0fr 2.2fr;
+        grid-template-rows: 0.6fr 0.5fr 1.0fr 2.2fr;
         grid-template-areas:
         "navbar navbar navbar navbar"
         "countrypicker countrypicker countrypicker datatable"
