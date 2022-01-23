@@ -1,13 +1,7 @@
 /* eslint-disable */
 import { useState, useEffect } from 'react';
 import  styles from'./App.module.css';
-import {CountryPicker} from './components';
-import {Navbar} from './components';
-import {SearchTable} from './components';
-import {Infections} from './components';
-import {Recovery} from './components';
-import {Deaths} from './components';
-import {Graph} from './components';
+import {CountryPicker,Navbar,SearchTable,Infections,Recovery,Deaths,Graph} from './components';
 import {fetchGlobalData, fetchCountryDetails} from './http/http';
 import { ThemeContext } from './libs/context';
 

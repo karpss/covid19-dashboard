@@ -38,6 +38,7 @@ const SearchTable = () => {
                 className={styles.country_input}
                 type='text'
                 onChange={handleChange}
+                aria-label='country-search'
                 placeholder='Search'
                 
                 />

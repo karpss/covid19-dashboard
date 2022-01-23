@@ -20,15 +20,15 @@ const CountryPicker = ({handleCountryChange}) => {
     
     return (
         <div className={styles.dropdown}>
-            <select defaultValue=""  onChange={(e) => handleCountryChange(e.target.value)}>
+            <select data-testid="select" defaultValue=""  onChange={(e) => handleCountryChange(e.target.value)}>
 
-            <option value=""disabled>
+            <option  value=""disabled>
                 Global
             </option>
          
            
-         {fetchedCountries.map((country, i) => (
-          <option key={i} value={country}>
+         {fetchedCountries.map((country) => (
+          <option  key={country} value={country}>
             {country}
           </option>
           
@@ -40,6 +40,7 @@ const CountryPicker = ({handleCountryChange}) => {
            </select>
         </div>
     )
+    
 }
 
 export default CountryPicker;
