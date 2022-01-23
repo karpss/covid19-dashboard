@@ -13,7 +13,7 @@ const handleThemeSwitch = (e) => {
 
   return (
       <button type="button" className={styles.themeSwitch} onClick={handleThemeSwitch}>
-          <span role="img" aria-lable="theme switch">
+          <span role="img" aria-label="theme switch">
               {theme === 'dark' ? '🔅' : '🌞' }
               
             </span>

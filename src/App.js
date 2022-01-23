@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { useState, useEffect } from 'react';
 import  styles from'./App.module.css';
-import CountryPicker from './components/CountryPicker/CountryPicker';
-import Navbar from './components/Navbar/Navbar';
-import SearchTable from './components/SearchTable/SearchTable';
-import Infections from './components/Infections/Infections';
-import Recovery from './components/Recoveries/Recovery';
-import Deaths from './components/Deaths/Deaths';
-import Graph from './components/Graph/Graph';
+import {CountryPicker} from './components';
+import {Navbar} from './components';
+import {SearchTable} from './components';
+import {Infections} from './components';
+import {Recovery} from './components';
+import {Deaths} from './components';
+import {Graph} from './components';
 import {fetchGlobalData, fetchCountryDetails} from './http/http';
 import { ThemeContext } from './libs/context';
 
