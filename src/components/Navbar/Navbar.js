@@ -6,7 +6,7 @@ import styles from './Navbar.module.css';
 const Navbar = () => {
     return (
         <nav className={styles.navbar_item}>
-           Covid 19 Dashboard
+         <div> Covid 19 Dashboard </div> 
            <div>
             <ThemeSwitch/>
 

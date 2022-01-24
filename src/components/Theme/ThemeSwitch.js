@@ -17,10 +17,6 @@ const handleThemeSwitch = (e) => {
               {theme === 'dark' ? '🔅' : '🌞' }
               
             </span>
-          
-
-
-
 
       </button>
   )
