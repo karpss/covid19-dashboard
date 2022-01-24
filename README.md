@@ -18,6 +18,4 @@ With this dashboard users can search and view Covid-19 data from around the worl
 - Make dashboard responsive
 
 # How to run this project
-- git clone the project, then ```bash
-npm install and npm start 
-```
+- git clone the project, then ```npm install and npm start ```
