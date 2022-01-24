@@ -1,46 +1,37 @@
-/* eslint-disable */
-import React,{useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {fetchCountriesData} from '../../http/http';
 
 import styles from './CountryPicker.module.css';
 
 const CountryPicker = ({handleCountryChange}) => {
-    const [fetchedCountries, setFetchedCountries] = useState([]); 
-    
-    useEffect(() => {
-        const getCountriesAPI = async () => {
-            setFetchedCountries(await fetchCountriesData());
+  const [fetchedCountries, setFetchedCountries] = useState([]);
 
-        };
-        getCountriesAPI();
-    }, [setFetchedCountries]);
+  useEffect(() => {
+    const getCountriesAPI = async () => {
+      setFetchedCountries(await fetchCountriesData());
+    };
+    getCountriesAPI();
+  }, [setFetchedCountries]);
 
-    
+  return (
+    <div className={styles.dropdown}>
+      <select
+        data-testid="select"
+        defaultValue=""
+        onChange={(e) => handleCountryChange(e.target.value)}
+      >
+        <option value="" disabled>
+          Global
+        </option>
 
-    
-    return (
-        <div className={styles.dropdown}>
-            <select data-testid="select" defaultValue=""  onChange={(e) => handleCountryChange(e.target.value)}>
-
-            <option  value=""disabled>
-                Global
-            </option>
-         
-           
-         {fetchedCountries.map((country) => (
-          <option  key={country} value={country}>
+        {fetchedCountries.map((country) => (
+          <option key={country} value={country}>
             {country}
           </option>
-          
         ))}
-    
-    
-        
-        
-           </select>
-        </div>
-    )
-    
-}
+      </select>
+    </div>
+  );
+};
 
 export default CountryPicker;
