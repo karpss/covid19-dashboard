@@ -43,6 +43,7 @@ const SearchTable = () => {
           <Datatable
             key={table.country}
             country={table.country}
+            countryInfo={table.countryInfo.flag}
             tests={table.tests}
             critical={table.critical}
           />

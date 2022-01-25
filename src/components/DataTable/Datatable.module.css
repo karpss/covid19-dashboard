@@ -26,6 +26,12 @@
     width: 200px;
 }
 
+.country_nameflag img{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
 .country_data{
 display: flex;
 text-align: right;
